@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#220A63" />
+  <meta name="description" content="Tutorial interactivo de piano para aprender los primeros cuatro compases de Ordinary, por Musicala." />
+  <title>Ordinary • Piano paso a paso | Musicala</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Musicala, inicio">
+        <div class="brand-art" aria-hidden="true">
+          <img id="logo-img" src="https://static.wixstatic.com/media/85afce_3420ed7e985447a7b88a642091ee1307~mv2.png/v1/fill/w_352,h_100,al_c,q_85/85afce_3420ed7e985447a7b88a642091ee1307~mv2.png" alt="" />
+          <span class="brand-fallback">musicala<span class="brand-dot">.</span></span>
+        </div>
+        <span class="brand-annotation">CREA · Aprende tocando</span>
+      </a>
+      <div class="header-right"><span class="online-dot" aria-hidden="true"></span> <span>Laboratorio de piano</span> <span class="header-separator"></span><span class="edition">LECCIÓN 01</span></div>
+    </header>
+
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="mini-star">✦</span> APRENDE UNA CANCIÓN REAL, NOTA A NOTA</div>
+        <h1 id="hero-title">Ordinary<span class="title-asterisk">✳</span></h1>
+        <p class="hero-artist">Alex Warren <span aria-hidden="true">·</span> Tutorial de piano</p>
+        <p class="hero-description">Cuatro compases. Dos manos. Un comienzo a tu ritmo. Escucha, mira las teclas y toca sin enredarte con la partitura.</p>
+        <div class="hero-chips"><span><i class="lucide-dot"></i> Nivel inicial</span><span>♫ 12/8</span><span>♯ Fa y Do</span><span>4 compases</span></div>
+      </div>
+      <div class="hero-graphic" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="hero-note">♫</div><div class="hero-sparkle sparkle-a">✧</div><div class="hero-sparkle sparkle-b">✦</div><div class="hero-sparkle sparkle-c">✳</div></div>
+    </section>
+
+    <div class="workspace">
+      <aside class="sidebar" aria-label="Ruta de aprendizaje">
+        <div class="section-topline">TU RUTA <span id="progress-copy">0 / 4 dominados</span></div>
+        <div class="overall-progress" aria-label="Progreso de la lección"><div id="overall-progress-fill"></div></div>
+        <div class="bar-nav" id="bar-nav" role="group" aria-label="Elegir compás"></div>
+        <div class="side-note"><span class="side-note-icon">💡</span><strong>Un pasito a la vez</strong><p>Primero escucha, después encuentra las notas y, cuando estés listo, tócalas.</p></div>
+      </aside>
+
+      <main class="lesson-main">
+        <section class="lesson-card" aria-labelledby="lesson-title">
+          <div class="lesson-card-header">
+            <div class="lesson-pager"><span class="tiny-kicker">ESTÁS APRENDIENDO</span><div class="pill-compass" id="lesson-counter">COMPÁS 01 / 04</div></div>
+            <span class="hand-indicator" id="hand-indicator"><span class="hand-hand">✋</span> Mano izquierda</span>
+          </div>
+          <h2 id="lesson-title"></h2>
+          <p class="lesson-intro" id="lesson-intro"></p>
+          <div class="focus-band"><span class="focus-icon">✦</span><div><span class="focus-label">ESCUCHA ESTE PATRÓN</span><div class="focus-notes" id="focus-notes"></div></div><div class="focus-repeat" id="focus-repeat"></div></div>
+          <div class="tip-line"><span>🎯</span><p id="lesson-tip"></p></div>
+        </section>
+
+        <section class="sound-card" aria-labelledby="sound-title">
+          <div class="sound-top"><div><span class="tiny-kicker">ESCUCHA Y OBSERVA</span><h2 id="sound-title">Así suena el compás</h2></div><span class="speed-label" id="speed-value">Velocidad 75%</span></div>
+          <div class="player-bar">
+            <button class="button-primary" id="play-btn" type="button"><span id="play-icon">▶</span><span id="play-label">Escuchar</span></button>
+            <button class="button-secondary icon-button" id="stop-btn" type="button" title="Detener" aria-label="Detener reproducción">■</button>
+            <button class="button-secondary" id="play-all-btn" type="button">♫ Los 4 compases</button>
+            <div class="tempo-control"><label for="tempo-slider">Más lento <span class="tempo-fast">Más rápido</span></label><input id="tempo-slider" type="range" min="40" max="110" value="75" step="5" aria-label="Velocidad de reproducción" /></div>
+          </div>
+          <div class="player-options"><div class="hand-selector" id="hand-selector" aria-label="Qué mano escuchar" role="group"><button class="hand-choice active" type="button" data-hand="both">Ambas manos</button><button class="hand-choice" type="button" data-hand="left">Izquierda</button><button class="hand-choice" type="button" data-hand="right">Derecha</button></div><label class="switch-label"><input type="checkbox" id="loop-toggle" /><span class="switch-ui"></span> Repetir compás</label></div>
+          <div class="timeline-heading"><span>EL COMPÁS, EN 4 GRUPOS DE 3</span><span id="now-playing">Pulsa escuchar para empezar</span></div>
+          <div class="beat-bar" id="beat-bar" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span></div>
+          <div class="measure-scroll"><div class="measure" id="measure" role="group" aria-label="Notas de la mano izquierda y derecha en el compás seleccionado"></div></div>
+          <div class="measure-legend"><span><i class="legend-mark legend-left"></i> Mano izquierda</span><span><i class="legend-mark legend-right"></i> Mano derecha</span><span>• Cada casilla = 1 corchea</span></div>
+        </section>
+
+        <section class="keyboard-card" aria-labelledby="keyboard-title">
+          <div class="keyboard-top"><div><span class="tiny-kicker">MIRA DÓNDE TOCAR</span><h2 id="keyboard-title">Tu piano interactivo</h2><p>Pulsa cualquier tecla para escucharla. Las notas de este compás están señaladas.</p></div><div class="keyboard-note-badge"><span class="keyboard-note-tiny">ÚLTIMA NOTA</span><strong id="last-note">Toca una tecla ♫</strong></div></div>
+          <div class="keyboard-toolbar"><span class="dot-pill"><i class="legend-mark legend-left"></i> Izquierda</span><span class="dot-pill"><i class="legend-mark legend-right"></i> Derecha</span><label class="names-toggle"><input type="checkbox" id="show-names" checked /> Mostrar nombres</label></div>
+          <div class="piano-scroll" tabindex="0" aria-label="Teclado de piano desplazable horizontalmente"><div class="piano" id="piano" role="group" aria-label="Teclas del piano C3 a B5"></div></div>
+          <p class="piano-caption" id="piano-caption">Busca las teclas iluminadas y tócales con calma.</p>
+        </section>
+
+        <section class="practice-card" aria-labelledby="practice-title">
+          <div class="practice-info"><span class="tiny-kicker">AHORA TE TOCA A TI</span><h2 id="practice-title">Practiquemos juntos 💜</h2><p id="practice-explainer">Activa el reto y pulsa las teclas que te pida el tutorial, en orden.</p><div class="practice-stats"><span id="practice-step">0 de 12 notas</span><div class="practice-progress"><div id="practice-fill"></div></div></div><div class="practice-feedback" aria-live="polite" id="practice-feedback">¿Listo para tocar tu primera nota?</div></div><div class="practice-actions"><div class="practice-hand-pick" role="group" aria-label="Mano para practicar"><button type="button" class="practice-hand active" data-practice="left">Izquierda</button><button type="button" class="practice-hand" data-practice="right">Derecha</button></div><button type="button" class="button-practice" id="practice-btn">Comenzar práctica →</button><button type="button" class="button-small" id="hint-btn">🔎 Mostrar pista</button></div>
+        </section>
+
+        <div class="bottom-nav"><button type="button" id="previous-btn" class="button-nav">← Compás anterior</button><button type="button" id="next-btn" class="button-next">Siguiente compás →</button></div>
+
+        <section class="understanding" aria-labelledby="understanding-title"><div class="understanding-heading"><span class="tiny-kicker">ENTIENDE LO QUE ESTÁS TOCANDO</span><h2 id="understanding-title">La teoría, sin vueltas</h2></div><div class="fact-grid">
+          <details class="fact"><summary><span class="fact-emblem">12/8</span><span><strong>¿Por qué 12/8?</strong><small>Cuatro pulsos que se subdividen en tres</small></span><b>＋</b></summary><p>Hay <strong>12 corcheas por compás</strong>, organizadas en <strong>4 grupos de 3</strong>. Cuenta: <em>UNO-dos-tres, DOS-dos-tres, TRES-dos-tres, CUATRO-dos-tres</em>. Por eso verás cuatro grupitos de tres notas en la mano izquierda.</p></details>
+          <details class="fact"><summary><span class="fact-emblem">♯</span><span><strong>¿Qué son los sostenidos?</strong><small>Fa♯ y Do♯ en la armadura</small></span><b>＋</b></summary><p>La partitura tiene dos sostenidos en la armadura: <strong>Fa♯ y Do♯</strong>. Eso significa que, cuando aparezcan esas notas, normalmente se toca la tecla negra inmediatamente a la derecha de Fa o Do. En nuestros ejemplos verás escrito Fa♯ para que sea más fácil.</p></details>
+          <details class="fact"><summary><span class="fact-emblem">𝄐</span><span><strong>¿Qué hace el pedal?</strong><small>Un sonido unido y suave</small></span><b>＋</b></summary><p>La indicación de pedal aparece desde el comienzo. Si tienes pedal de sustain, úsalo de manera suave para ligar los sonidos, sin dejar que se mezclen demasiado. Primero aprende las notas <strong>sin pedal</strong>; después añádelo.</p></details>
+          <details class="fact"><summary><span class="fact-emblem">mp</span><span><strong>¿Qué significan mp y el tempo?</strong><small>Volumen medio suave y pulsación</small></span><b>＋</b></summary><p><strong>mp</strong> significa <em>mezzo piano</em>: toca moderadamente suave. El tempo impreso es <strong>negra con puntillo = 112</strong>. Como cada pulso contiene tres corcheas, la app te deja empezar mucho más lento y subir gradualmente.</p></details>
+        </div></section>
+
+        <details class="score-details"><summary>📄 Ver el fragmento de la partitura original <span>Referencia opcional</span></summary><div class="score-images"><p>Estos recortes provienen de la página 1 del PDF que compartiste. La app está pensada para aprender también sin leer pentagrama.</p><figure><img src="assets/partitura_compases_1_a_3.png" alt="Compases uno a tres de la partitura original de piano: mano derecha en silencio y arpegios de mano izquierda" /><figcaption>Compases 1 al 3.</figcaption></figure><figure><img src="assets/partitura_compas_4.png" alt="Compás cuatro de la partitura original: continúa el acompañamiento y entra la melodía" /><figcaption>Compás 4.</figcaption></figure></div></details>
+      </main>
+    </div>
+    <footer class="footer"><div class="footer-brand">musicala<span>.</span> <span>el arte se aprende viviéndolo</span></div><small>Recurso pedagógico a partir de la partitura aportada · Ordinary, Alex Warren · Ejercicio de estudio de 4 compases</small></footer>
+  </div>
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

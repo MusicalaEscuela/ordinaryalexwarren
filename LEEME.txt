@@ -1,0 +1,35 @@
+ORDINARY · PIANO PASO A PASO | MUSICALA
+=======================================
+
+CÓMO ABRIR
+Abre index.html en Chrome, Edge, Safari o Firefox.
+También puedes subir esta carpeta a GitHub Pages, Firebase Hosting o
+cualquier alojamiento de archivos estáticos. No necesita instalación.
+
+QUÉ INCLUYE
+- Tutorial de los compases 1 a 4 de Ordinary, Alex Warren.
+- Piano visual: clic en las teclas, nombres en español y sostenidos.
+- Reproducción sintetizada de ambas manos, cada una por separado,
+  y los cuatro compases seguidos.
+- Control de velocidad y repetición de un compás.
+- Ejercicios interactivos para comprobar notas y guardar avance local.
+- Explicaciones breves de 12/8, armadura, pedal y dinámica.
+- Recortes de referencia, tomados de la página 1 del PDF proporcionado.
+
+NOTAS DE LA TRANSCRIPCIÓN
+La mano derecha permanece en silencio en los compases 1, 2 y 3.
+Compás 4: después de los silencios, Fa sostenido 5, Mi 5 y Re 5.
+Para facilitar el estudio, cada celda de la cuadrícula representa
+una corchea; no se pretende reemplazar la notación tradicional.
+El audio es un sintetizador didáctico local, no la grabación comercial.
+
+IDENTIDAD
+Colores de Musicala: #220A63, #680DBF, #0C41C4, #5729FF, #CE0071.
+Al estar en línea se solicita el logotipo desde el sitio imusicala.com
+(mediante su CDN de Wix). Si no hay conexión, aparece un logotipo textual.
+Para hacerlo 100% desconectado con el logo real, sustituye la imagen
+remota de index.html por tu logo local (p. ej. assets/logo.png).
+
+USO
+Material didáctico privado basado en la partitura aportada por el usuario.
+No incluye el audio original ni la canción completa.
